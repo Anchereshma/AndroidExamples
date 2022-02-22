@@ -5,11 +5,13 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id 'com.android.application' version '7.1.0-alpha08'
-        id 'com.android.library' version '7.1.0-alpha08'
+        id 'com.android.application' version '7.1.1'
+        id 'com.android.library' version '7.1.1'
         id 'org.jetbrains.kotlin.android' version '1.5.20'
-
+        id "org.jetbrains.kotlin.kapt" version "1.6.20-M1"
+        id 'hilt-android-gradle-plugin' version "2.41"
     }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
