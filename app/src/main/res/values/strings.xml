@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SignUpPage">SignUp Page</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="mobileNumber">MobileNumber</string>
+    <string name="email">Email</string>
+    <string name="enterUserName">Enter UserName</string>
+    <string name="enterMobileNumber">Enter Mobile Number</string>
+    <string name="setPassword">Set Password</string>
+    <string name="enterEmail">Enter Email</string>
+    <string name="signUp">Sign Up</string>
+    <string name="logIn">LogIn</string>
+    <string name="AlreadyHaveAnAccount">Already have an account??</string>
+    <string name="signUpFragment">SignUpFragment</string>
+    <string name="LoginPage">Login Page</string>
+    <string name="enterPassword">Enter Password</string>
+    <string name="LoginFragment">LoginFragment</string>
+
+
+
+
+</resources>
