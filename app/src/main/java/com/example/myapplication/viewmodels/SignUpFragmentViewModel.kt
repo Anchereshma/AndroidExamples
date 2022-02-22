@@ -5,15 +5,22 @@ import android.util.Log
 import android.view.View
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.SavedStateHandle
 import androidx.navigation.findNavController
 import com.example.myapplication.R
 import com.example.myapplication.database.entity.User
 import com.example.myapplication.repository.UserRepository
+import dagger.assisted.Assisted
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
 /**
  * ViewModel for [SignUpFragment].
  */
-class SignUpFragmentViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class SignUpFragmentViewModel @Inject constructor(
+    application: Application, val userRepository: UserRepository
+) : AndroidViewModel(application) {
     private val TAG = "SignUpFragmentViewModel"
     val enterUserName = ObservableField<String>()
 
@@ -22,9 +29,6 @@ class SignUpFragmentViewModel(application: Application) : AndroidViewModel(appli
     val enterEmail = ObservableField<String>()
 
     val setPassword = ObservableField<String>()
-
-    val userRepository = UserRepository(getApplication())
-
 
     /** Handles signup button.*/
     fun onSignUpButtonClick(v: View) {
@@ -55,7 +59,7 @@ class SignUpFragmentViewModel(application: Application) : AndroidViewModel(appli
     }
 
     override fun onCleared() {
-
+        Log.d("ANIL", "onCleared")
         super.onCleared()
     }
 

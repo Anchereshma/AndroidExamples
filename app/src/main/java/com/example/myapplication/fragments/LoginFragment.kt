@@ -10,7 +10,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentLoginBinding
+import com.example.myapplication.repository.UserRepository
 import com.example.myapplication.viewmodels.LoginFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +25,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [LoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -38,7 +42,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val viewModel: LoginFragmentViewModel = ViewModelProvider(this).get(LoginFragmentViewModel::class.java)
         val dataBinding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater,
@@ -52,8 +56,6 @@ class LoginFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
          * @return A new instance of fragment LoginFragment.
          */
         // TODO: Rename and change types and number of parameters

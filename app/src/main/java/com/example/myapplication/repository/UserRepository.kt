@@ -4,12 +4,13 @@ import android.app.Application
 import com.example.myapplication.database.AppDataBase
 import com.example.myapplication.database.dao.UserDao
 import com.example.myapplication.database.entity.User
+import javax.inject.Inject
 
 /**
  * Repository to access [UserDao]
  */
-class UserRepository(application: Application) {
-    private val dao: UserDao = AppDataBase.getDatabase(application).userDao()
+class UserRepository @Inject constructor(appDataBase: AppDataBase) {
+    private val dao: UserDao = appDataBase.userDao()
 
     fun insert(user: User){
        dao.insert(user)

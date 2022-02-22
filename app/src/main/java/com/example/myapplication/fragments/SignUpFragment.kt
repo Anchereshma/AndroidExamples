@@ -1,6 +1,9 @@
 package com.example.myapplication.fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSignUpBinding
+import com.example.myapplication.repository.UserRepository
 import com.example.myapplication.viewmodels.SignUpFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +27,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [SignUpFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class SignUpFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -37,7 +44,8 @@ class SignUpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        //Log.d("Anil", ""+repository.getAll())
         val viewModel: SignUpFragmentViewModel =
             ViewModelProvider(this).get(SignUpFragmentViewModel::class.java)
         // Inflate the layout for this fragment

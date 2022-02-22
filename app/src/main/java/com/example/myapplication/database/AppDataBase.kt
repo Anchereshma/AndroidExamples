@@ -11,26 +11,8 @@ import com.example.myapplication.database.dao.UserDao
 abstract class AppDataBase : RoomDatabase(){
     abstract fun userDao(): UserDao
 
-
     companion object {
         // Singleton prevents multiple instances of database opening at the same time.
-        @Volatile
-        private var INSTANCE: AppDataBase? = null
-        private const val databaseName:String = "user_database"
-
-        fun getDatabase(context: Context): AppDataBase {
-            // if the INSTANCE is not null, then return it,
-            // if it is, then create the database
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDataBase::class.java,
-                    databaseName
-                ).allowMainThreadQueries().build()
-                INSTANCE = instance
-                // return instance
-                instance
-            }
-        }
+        const val databaseName:String = "user_database"
     }
 }
