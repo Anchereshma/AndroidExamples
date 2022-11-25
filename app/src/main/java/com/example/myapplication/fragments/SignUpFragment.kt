@@ -56,6 +56,7 @@ class SignUpFragment : Fragment() {
             false
         )
         dataBinding.viewModel = viewModel
+
         return dataBinding.root
     }
 

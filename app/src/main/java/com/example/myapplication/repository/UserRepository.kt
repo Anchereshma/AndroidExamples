@@ -25,4 +25,9 @@ class UserRepository @Inject constructor(appDataBase: AppDataBase) {
         return dao.getUser(username)
     }
 
+    fun readAllData(username: String,password:String):List<User>{
+        return  dao.readAllData(username, password)
+    }
+
+
 }

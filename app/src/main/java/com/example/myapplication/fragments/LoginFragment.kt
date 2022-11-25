@@ -1,7 +1,6 @@
 package com.example.myapplication.fragments
 
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentLoginBinding
-import com.example.myapplication.repository.UserRepository
 import com.example.myapplication.viewmodels.LoginFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
