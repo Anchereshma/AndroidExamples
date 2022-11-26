@@ -17,8 +17,5 @@ interface UserDao {
    @Query("SELECT * FROM user WHERE user.userName LIKE :username")
    fun getUser(username: String): List<User>
 
-   @Query("SELECT * FROM user WHERE user.userName LIKE :username AND password LIKE :passWord")
-   fun readAllData(username: String,passWord: String) :List<User>
-
 
 }

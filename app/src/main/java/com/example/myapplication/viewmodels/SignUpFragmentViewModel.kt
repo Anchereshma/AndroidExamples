@@ -32,7 +32,10 @@ class SignUpFragmentViewModel @Inject constructor(
 
     /** Handles signup button.*/
     fun onSignUpButtonClick(v: View) {
-        if (enterUserName.get() != null && enterMobileNumber.get() != null && enterEmail.get() != null && setPassword.get() != null) {
+        if (enterUserName.get() != null && enterMobileNumber.get() != null && enterEmail.get()
+            != null && setPassword.get()
+            != null
+        ) {
             userRepository.insert(
                 User(
                     0,
