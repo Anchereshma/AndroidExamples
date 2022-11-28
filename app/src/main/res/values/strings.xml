@@ -18,6 +18,8 @@
     <string name="LoginPage">Login Page</string>
     <string name="enterPassword">Enter Password</string>
     <string name="LoginFragment">LoginFragment</string>
+    <string name="HomeFragment">HomeFragment</string>
+    <string name="hello_home_fragment">Hello Home Fragment</string>
 
 
 
